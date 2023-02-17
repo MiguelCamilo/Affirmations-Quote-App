@@ -34,7 +34,7 @@ export default function QuoteForm({ setQuotes }) {
     },[clear])
 
 	return (
-        <div className="flex md:flex-col justify-around p-6 mt-[12rem] md:mt-[30rem] md:mx-2 md:border md:border-slate-900 md:rounded-md">
+        <div className="flex justify-center items-center p-6 md:mt-5 md:mx-2 md:rounded-md">
 		<form onSubmit={handleSubmit} className="">
 			<label htmlFor="quote">
 				Quote
@@ -48,7 +48,7 @@ export default function QuoteForm({ setQuotes }) {
 				/>
 			</label>
 
-            <label htmlFor="name" className="ml-0 md:ml-2">
+            <label htmlFor="name" className="ml-2 md:ml-2">
                 Name
                 <input 
                     type="text"
@@ -59,7 +59,7 @@ export default function QuoteForm({ setQuotes }) {
                     className="border-2 border-stone-900  ml-2 rounded-md mt-3 md:mt-0"
                 />
             </label>
-            <button type="submit" value="add" className="bg-blue-500 p-1 rounded-lg mt-3 md:mt-0 ml-[6em] md:ml-2">
+            <button type="submit" value="add" className="bg-green-500 p-1 rounded-lg mt-3 ml-[13rem] md:mt-0 md:ml-2">
                 Add Quote
             </button>
 		</form>
