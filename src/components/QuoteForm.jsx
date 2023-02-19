@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
+import { api_url } from "../secrets";
 
 export default function QuoteForm({ setQuotes }) {
+
 	const [quote, setQuote] = useState(""); // empty string is needed to control state
 	const [name, setName] = useState("");
     const [clear, setClear] = useState(false)
 
 	const handleSubmit = (e) => {
         e.preventDefault()
-		fetch(`https://affirmation-quote-api.web.app/quotes`, {
+		fetch(api_url.api, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

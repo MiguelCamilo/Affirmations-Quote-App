@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import QuoteForm from "./QuoteForm";
 import Quotes from "./Quotes";
 import Header from "./Header";
+import { api_url } from "../secrets";
+
 
 export default function QuoteBody() {
 	const [quotes, setQuotes] = useState();
 
 	useEffect(() => {
-		fetch(`https://affirmation-quote-api.web.app/quotes`)
+		fetch(api_url.api)
 			.then((res) => res.json())
 			.then(setQuotes)
 			.catch((err) => console.error(err));
